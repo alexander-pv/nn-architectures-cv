@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Workshop version'
+        description: 'Set version'
         required: true
 
 jobs:
@@ -23,12 +23,12 @@ jobs:
         env:
             DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
             VERSION: ${{ github.event.inputs.version }}
-        run: docker build -f ./Dockerfile -t $DOCKER_USER/arch_workshop:latest -t $DOCKER_USER/arch_workshop:$VERSION .
+        run: docker build -f ./Dockerfile -t $DOCKER_USER/nn-architectures-cv:latest -t $DOCKER_USER/nn-architectures-cv:$VERSION .
 
       - name: Push docker image
         env:
           DOCKER_USER: ${{ secrets.DOCKERHUB_USERNAME }}
           VERSION: ${{ github.event.inputs.version }}
         run: |
-          docker push $DOCKER_USER/arch_workshop:latest
-          docker push $DOCKER_USER/arch_workshop:$VERSION
+          docker push $DOCKER_USER/nn-architectures-cv:latest
+          docker push $DOCKER_USER/nn-architectures-cv:$VERSION
