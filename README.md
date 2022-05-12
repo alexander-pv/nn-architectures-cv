@@ -8,7 +8,7 @@ How to run:
 Conda:
 
 ```bash
-$ git clone nn-architectures-cv -b v2022.5.1 && cd nn-architectures-cv
+$ git clone nn-architectures-cv && cd nn-architectures-cv
 $ conda env create -f environment.yml && conda activate nn-architectures
 $ jupyter-notebook
 ```
