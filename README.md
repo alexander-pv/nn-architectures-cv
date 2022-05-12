@@ -7,6 +7,7 @@ How to run:
 
 Conda:
 
+
 ```bash
 $ git clone nn-architectures-cv && cd nn-architectures-cv
 $ conda env create -f environment.yml && conda activate nn-architectures
