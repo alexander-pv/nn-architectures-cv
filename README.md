@@ -9,7 +9,7 @@ Conda:
 
 
 ```bash
-$ git clone nn-architectures-cv && cd nn-architectures-cv
+$ git clone nn-architectures-cv && cd nn-architectures-cv && git lfs pull
 $ conda env create -f environment.yml && conda activate nn-architectures
 $ jupyter-notebook
 ```
